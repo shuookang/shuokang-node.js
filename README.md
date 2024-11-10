@@ -15,41 +15,41 @@ This node module provides allows you to buy things from an online shop and has f
 
 ## Usage
 
-app.js:
+app.js: <br>
 const app = require('./shuokang_node');
 
-//display all items in the shop and their prices
+//display all items in the shop and their prices <br>
 console.log(app.displayShopItems());
 
-//update shop item price change scarf price from 15 to 10
+//update shop item price change scarf price from 15 to 10 <br>
 app.updateShopItemPrice('scarf', 10);
 
-//display all items in the shop and their updated prices
+//display all items in the shop and their updated prices <br>
 console.log(app.displayShopItems());
 
-//add items to shopping bag
-app.addItemToShoppingBag('scarf', 5);
-app.addItemToShoppingBag('jeans', 2);
-app.addItemToShoppingBag('shoes', 1);
+//add items to shopping bag <br>
+app.addItemToShoppingBag('scarf', 5); <br>
+app.addItemToShoppingBag('jeans', 2); <br>
+app.addItemToShoppingBag('shoes', 1); <br>
 
-//display all items you have added into the shopping bag and the quantity of each item
+//display all items you have added into the shopping bag and the quantity of each item <br>
 console.log(app.displayShoppingBag());
 
-//remove item from shopping bag
+//remove item from shopping bag <br>
 app.removeItemFromShoppingBag('scarf');
 
-//updated display of all items you have added into the shopping bag and the quantity of each item
+//updated display of all items you have added into the shopping bag and the quantity of each item <br>
 console.log(app.displayShoppingBag());
 
-//display the total cost of all items in the shopping bag
+//display the total cost of all items in the shopping bag <br>
 console.log(app.calculateTotalCostOfShoppingBag());
 
 ## Functions
-displayShopItems - display all items in the shop and their prices
-displayShoppingBag - display of all items you have added into the shopping bag and the quantity of each item
-updateShopItemPrice -  update the price of a item in the shop items list
-addItemToShoppingBag - add item into your shopping bag
-removeItemFromShoppingBag - remove item from shopping bag
+displayShopItems - display all items in the shop and their prices <br>
+displayShoppingBag - display of all items you have added into the shopping bag and the quantity of each item <br>
+updateShopItemPrice -  update the price of a item in the shop items list <br>
+addItemToShoppingBag - add item into your shopping bag <br>
+removeItemFromShoppingBag - remove item from shopping bag <br>
 calculateTotalCostOfShoppingBag - displays the total cost of all the items added into the shopping bag
 
 # References
