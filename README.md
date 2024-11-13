@@ -35,8 +35,11 @@ app.addItemToShoppingBag('shoes', 1); <br>
 //display all items you have added into the shopping bag and the quantity of each item <br>
 console.log(app.displayShoppingBag());
 
-//remove item from shopping bag <br>
-app.removeItemFromShoppingBag('scarf');
+//remove specific quantity of item from shopping bag <br>
+app.removeItemFromShoppingBag('scarf', 1);
+
+//remove all of this specfic item from shopping bag <br>
+app.removeItemFromShoppingBag('jeans', 2);
 
 //updated display of all items you have added into the shopping bag and the quantity of each item <br>
 console.log(app.displayShoppingBag());

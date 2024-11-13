@@ -76,15 +76,22 @@ module.exports = {
     },
 
     // function to remove item from shopping bag, throws error if item not found
-    removeItemFromShoppingBag(item) {
+    removeItemFromShoppingBag(item, qty) {
         const shoppingbagitem = this.findShoppingBagItem(item); //find item in shopping bag
         //if item not found in shopping bag, throw error to show it is not found
         if (!shoppingbagitem) {
             throw new Error('Item not found in shopping bag');
         }
-        shoppingbag = shoppingbag.filter(i => i.item !== item); 
-        //creates a new array that includes all other items except the one to be removed
-        console.log(`The ${item} has been removed from the shopping bag.`);
+        //if the quantity to remove is greater than or equal to the quantity in the shopping bag, remove the item
+        if (qty >= shoppingbagitem.qty) {
+            shoppingbag = shoppingbag.filter(i => i.item !== item); 
+            //remove item from shopping bag filter out the item
+            console.log(`The ${item} has been removed from the shopping bag.`);
+        } else {
+            //otherwise, decrease the quantity
+            shoppingbagitem.qty -= qty;
+            console.log(`${qty} of ${item} has been removed from the shopping bag.`);
+        }
     },
 
     // function to calculate total cost of items in shopping bag
