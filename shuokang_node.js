@@ -1,6 +1,6 @@
 let shoppingbag = 
 [
-    { item: "t-shirt", qty: 2 }
+    { item: "t-shirt", qty: 2, price: 15 },
 ];
 
 let shopitems = 
@@ -72,7 +72,7 @@ module.exports = {
         }
         shoppingbag.push({ item, qty, price: shopitem.price }); 
         //add item to shopping bag
-        console.log(`${item} has been added to the shopping bag.`);
+        console.log(`The ${item} has been added to the shopping bag.`);
     },
 
     // function to remove item from shopping bag, throws error if item not found
@@ -84,16 +84,16 @@ module.exports = {
         }
         shoppingbag = shoppingbag.filter(i => i.item !== item); 
         //creates a new array that includes all other items except the one to be removed
-        console.log(`${item} has been removed from the shopping bag.`);
+        console.log(`The ${item} has been removed from the shopping bag.`);
     },
 
     // function to calculate total cost of items in shopping bag
     calculateTotalCostOfShoppingBag() {
-        let total = 0; //initialize total cost to 0
+        let totalcost = 0; //initialize total cost to 0
         shoppingbag.forEach(item => { //loop through each item in shopping bag
-            total += item.price * item.qty; //calculate the total cost of all the items
+            totalcost += item.price * item.qty; //calculate the total cost of all the items
         });
-        console.log(`Total payment due is $${total}`);
-        return total;
-    }
+        console.log(`Total payment due is $${totalcost}.`);
+        return totalcost;
+        }
 }
