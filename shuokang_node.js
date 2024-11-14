@@ -71,7 +71,7 @@ module.exports = {
             throw new Error('Item already in shopping bag');
         }
         shoppingbag.push({ item, qty, price: shopitem.price }); 
-        //add item to shopping bag
+        //add item as well as quantity to shopping bag
         console.log(`The ${item} has been added to the shopping bag.`);
     },
 
