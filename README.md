@@ -52,7 +52,7 @@ displayShopItems - display all items in the shop and their prices <br>
 displayShoppingBag - display of all items you have added into the shopping bag and the quantity of each item <br>
 updateShopItemPrice -  update the price of a item in the shop items list <br>
 addItemToShoppingBag - add item into your shopping bag <br>
-removeItemFromShoppingBag - remove item from shopping bag <br>
+removeItemFromShoppingBag - remove item from shopping bag and specific quantity <br>
 calculateTotalCostOfShoppingBag - displays the total cost of all the items added into the shopping bag
 
 # References
